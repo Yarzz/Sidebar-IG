@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Sidebar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #000000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .sidebar h1 {
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 40px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar i {
+            margin-right: 10px;
+        }
+
+        .sidebar .more-btn {
+            cursor: pointer;
+        }
+        
+        .sidebar .more-btn i {
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h1>Instagram</h1>
+    <ul>
+        <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="#"><i class="fas fa-search"></i>Search</a></li>
+        <li><a href="#"><i class="fas fa-compass"></i>Explore</a></li>
+        <li><a href="#"><i class="fas fa-video"></i>Reels</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i>Message</a></li>
+        <li><a href="#"><i class="fas fa-bell"></i>Notification</a></li>
+        <li><a href="#"><i class="fas fa-user-plus"></i>Create</a></li>
+        <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
+        <li><a href="#"><i class="fas fa-bars"></i>More</a></li>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
