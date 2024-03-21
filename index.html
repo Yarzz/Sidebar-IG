@@ -9,29 +9,26 @@
         body {
             font-family: Arial;
             margin: 0;
+            display: grid;
+            grid-template-columns: 250px auto 250px;
         }
 
         .sidebar {
-            width: 250px;
-            height: 100vh;
             background-color: #000000;
-            position: fixed;
-            top: 0;
-            left: 0;
             padding: 20px;
             box-sizing: border-box;
         }
 
         .sidebar h1 {
-            font-size: 20px;
-            margin-bottom: 40px;
+            font-size: 24px;
+            margin-bottom: 20px;
             color: white;
         }
 
         .sidebar ul {
             list-style-type: none;
-            padding: 0;
-            margin: 0;
+            padding: 0px;
+            margin: 0px;
         }
 
         .sidebar li {
@@ -49,12 +46,66 @@
             margin-right: 10px;
         }
 
+        .sidebar .more-items {
+            display: none;
+            position: fixed;
+            top: 0%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+            background-color: #000000;
+            border-radius: 10px;
+            box-shadow: 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            z-index: 1000;
+            animation: fadeInUp 0.3s ease forwards;
+        }
+
+        .sidebar .more-items li {
+            padding: 0px 0;
+        }
+
+        .sidebar .more-items li a {
+            display: block;
+            padding: 8px 20px;
+            color: #ffffff;
+        }
+
+        .sidebar .more-items li a:hover {
+            background-color: #757474;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .sidebar .more-btn {
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            color: #ffffff;
         }
-        
+
         .sidebar .more-btn i {
-            margin-left: auto;
+            margin-left: 0px;
+        }
+
+        .content {
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+        }
+
+        .right-sidebar {
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #ffffff;
         }
     </style>
 </head>
@@ -71,10 +122,38 @@
         <li><a href="#"><i class="fas fa-bell"></i>Notification</a></li>
         <li><a href="#"><i class="fas fa-user-plus"></i>Create</a></li>
         <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
-        <li><a href="#"><i class="fas fa-bars"></i>More</a></li>
-        </li>
+        <li class="more-btn" onclick="toggleMore()"><i class="fas fa-bars"></i>More<i class="fas fa-caret-down"></i></li>
+        <div class="more-items" id="moreMenu">
+            <ul>
+                <li><a href="#"><i class="fas fa-cog"></i>Settings</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i>Your Activity</a></li>
+                <li><a href="#"><i class="fas fa-bookmark"></i>Saved</a></li>
+                <li><a href="#"><i class="fas fa-paint-brush"></i>Switch Appearance</a></li>
+                <li><a href="#"><i class="fas fa-exclamation-circle"></i>Report a Problem</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i>Trends</a></li>
+                <li><a href="#"><i class="fas fa-exchange-alt"></i>Switch Account</a></li>
+                <li><a href="#"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
+            </ul>
+        </div>
     </ul>
 </div>
+
+<div class="content">
+    <h2>Main Content</h2>
+    <p>XXXXXXXXXXXXXX</p>
+</div>
+
+<div class="right-sidebar">
+    <h2>Right Sidebar</h2>
+    <p>XXXXXXXXXXXXXXX</p>
+</div>
+
+<script>
+    function toggleMore() {
+        var moreMenu = document.getElementById("moreMenu");
+        moreMenu.style.display = moreMenu.style.display === "block" ? "none" : "block";
+    }
+</script>
 
 </body>
 </html>
