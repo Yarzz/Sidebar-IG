@@ -1,0 +1,280 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    display: grid;
+    grid-template-areas: 'sidebar auto right-sidebar';
+    grid-template-columns: 250px auto 400px;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 'sidebar content right-sidebar';
+    grid-template-columns: 250px auto 400px;
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: auto 100px; /* Lebar konten diatur sesuai kebutuhan */
+    gap: 20px; /* Tambahkan jarak antar elemen */
+    margin-left: 250px; /* Sesuaikan margin kiri dengan lebar sidebar kiri */
+    margin-right: 400px; /* Sesuaikan margin kanan dengan lebar sidebar kanan */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    background-color: #000000;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.content {
+    background-color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.right-sidebar {
+    grid-area: right;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.story-container {
+    position: absolute;
+    top: 10px;
+    left: 250px; /* Lebar sidebar kiri */
+    right: 400px; /* Lebar sidebar kanan */
+    width: calc(100% - 650px); /* Sesuaikan dengan lebar sidebar */
+    display: flex;
+    gap: 10px; /* Jarak antar story */
+    background-color: #ffffff;
+    padding: 10px 0;
+    overflow-x: auto;
+}
+
+
+.story {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 50px; /* Border-radius setengah dari lebar atau tinggi */
+    cursor: pointer;
+    overflow: hidden; /* Agar gambar di dalam story tetap berbentuk bulat */
+    border: 2px solid transparent; /* Border awal transparan */
+}
+
+.story:hover {
+    border-color: #ff00ea; /* Warna border saat hover (misalnya merah) */
+}
+
+.story img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Agar gambar tetap proporsional di dalam story */
+    border-radius: 40px; /* Sesuaikan dengan border-radius di atas */
+}
+
+.sidebar {
+    grid-area: sidebar;
+    position: fixed;
+    background-color: #000000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+    margin-left: 0px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.sidebar li {
+    margin-top: 40px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar i {
+    margin-right: 10px;
+}
+
+.sidebar .more-items {
+    display: none;
+    position: fixed;
+    top: 15%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    background-color: #222222;
+    border-radius: 10px;
+    box-shadow: 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    animation: fadeInUp 0.3s ease forwards;
+}
+
+.sidebar .more-items li {
+    padding: 0px 0;
+}
+
+.sidebar .more-items li a {
+    display: block;
+    padding: 0px 0px;
+    color: #ffffff;
+}
+
+.sidebar .more-items li a:hover {
+    background-color: #757474;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sidebar .more-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+.sidebar .more-btn i {
+    margin-left: 0px;
+}
+
+.content {
+    grid-area: content;
+    padding:20px;
+    margin-top: 80px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-left: 0;
+}
+
+.right-sidebar {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.profile-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-info h3 {
+    margin: 0;
+    font-size: medium;
+}
+
+switch-account .account-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.switch-btn {
+    margin-left: auto;
+    background-color: #000000;
+    color: #0092be;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.see-all-btn {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.suggested-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.suggested-header h2 {
+    margin-top: 30px;
+    font-size: small;
+    color: #aaaaaa;
+}
+
+.user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.follow-btn {
+    margin-left: auto;
+    background-color: #000000;
+    color: #0092be;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-list {
+    margin-top: 10px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
