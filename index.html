@@ -5,112 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram Sidebar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            display: grid;
-            grid-template-columns: 250px auto 250px;
-        }
-
-        .sidebar {
-            background-color: #000000;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .sidebar h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: white;
-        }
-
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0px;
-            margin: 0px;
-        }
-
-        .sidebar li {
-            margin-bottom: 40px;
-        }
-
-        .sidebar a {
-            text-decoration: none;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-        }
-
-        .sidebar i {
-            margin-right: 10px;
-        }
-
-        .sidebar .more-items {
-            display: none;
-            position: fixed;
-            top: 0%;
-            left: 10%;
-            transform: translate(-50%, -50%);
-            background-color: #000000;
-            border-radius: 10px;
-            box-shadow: 10px rgba(0, 0, 0, 0.1);
-            padding: 10px;
-            z-index: 1000;
-            animation: fadeInUp 0.3s ease forwards;
-        }
-
-        .sidebar .more-items li {
-            padding: 0px 0;
-        }
-
-        .sidebar .more-items li a {
-            display: block;
-            padding: 8px 20px;
-            color: #ffffff;
-        }
-
-        .sidebar .more-items li a:hover {
-            background-color: #757474;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .sidebar .more-btn {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            color: #ffffff;
-        }
-
-        .sidebar .more-btn i {
-            margin-left: 0px;
-        }
-
-        .content {
-            padding: 20px;
-            box-sizing: border-box;
-            background-color: #ffffff;
-        }
-
-        .right-sidebar {
-            padding: 20px;
-            box-sizing: border-box;
-            background-color: #ffffff;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <div class="sidebar">
     <h1>Instagram</h1>
     <ul>
@@ -137,24 +34,90 @@
         </div>
     </ul>
 </div>
-
 <div class="content">
-    <h2>Main Content</h2>
-    <p>XXXXXXXXXXXXXX</p>
+    <div id="postsContainer" class="posts-container"></div>
+    <div class="post">
+        <div class="post-header">
+            <div class="profile-info">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.T1zA4-LUe8wnhMAmXgpsSgAAAA&pid=Api&P=0&h=180" alt="User Image">
+                <h3>Username</h3>
+            </div>
+        </div>
+        <div class="post-image">
+            <img src="https://via.placeholder.com/300" alt="Post Image">
+        </div>
+        <div class="post-actions">
+            <button class="like-btn">Like</button>
+            <button class="comment-btn">Comment</button>
+        </div>
+        <div class="post-comments">
+            <div class="comment">
+                <div class="profile-info">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.575opLhlpArqZpGsScOdZQHaJf&pid=Api&P=0&h=180" alt="User Image">
+                    <h3>Commenter</h3>
+                </div>
+                <p>Comment text goes here...</p>
+            </div>
+            <div class="comment">
+                <div class="profile-info">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.TK6SvRt4yuFXR9hXzxsksgHaE6&pid=Api&P=0&h=180" alt="User Image">
+                    <h3>Another Commenter</h3>
+                </div>
+                <p>Another comment text...</p>
+            </div>
+        </div>
+        <div class="add-comment">
+            <input type="text" placeholder="Add a comment...">
+            <button class="post-comment-btn">Post</button>
+        </div>
+    </div>
 </div>
-
 <div class="right-sidebar">
-    <h2>Right Sidebar</h2>
-    <p>XXXXXXXXXXXXXXX</p>
+    <div class="switch-account">
+        <div class="account-list">
+            <div class="account">
+                <div class="profile-info">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.BOiDADaHdm97UydxesRWrAHaE6&pid=Api&P=0&h=180" alt="Yarzz">
+                    <h3>Yarzz</h3>
+                    <button class="switch-btn">Switch</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="suggested-for-you">
+        <div class="suggested-header">
+            <h2>Suggested for You</h2>
+            <button class="see-all-btn">See All</button>
+        </div>
+        <div class="user-list">
+            <div class="user">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.3t1qul4u9YnRd0CC_ZpE3QAAAA&pid=Api&P=0&h=180" alt="Ashikaga Yoshihide">
+                <span>Ashikaga Yoshihide</span>
+                <button class="follow-btn">Follow</button>
+            </div>
+            <div class="user">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.7qmu54x8-M3mo3CSjYZlYgHaEK&pid=Api&P=0&h=180" alt="Daimyo Takeda Shingen">
+                <span>Daimyo Takeda Shingen</span>
+                <button class="follow-btn">Follow</button>
+            </div>
+            <div class="user">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.EG8ri77rJF-k2Nm1XO3CtgAAAA&pid=Api&P=0&h=180" alt="Hashiba Hideyoshi">
+                <span>Hashiba Hideyoshi</span>
+                <button class="follow-btn">Follow</button>
+            </div>
+            <div class="user">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.WCWmdc_L8b79pDDJd6miogHaGL&pid=Api&P=0&h=180" alt="Oda Nobunaga">
+                <span>Oda Nobunaga</span>
+                <button class="follow-btn">Follow</button>
+            </div>
+            <div class="user">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.oo98R6VGCeSXj1esxWYWagAAAA&pid=Api&P=0&h=180" alt="Saitō Tatsuoki">
+                <span>Saitō Tatsuoki</span>
+                <button class="follow-btn">Follow</button>
+            </div>
+        </div>
+    </div>
 </div>
-
-<script>
-    function toggleMore() {
-        var moreMenu = document.getElementById("moreMenu");
-        moreMenu.style.display = moreMenu.style.display === "block" ? "none" : "block";
-    }
-</script>
-
+<script src="scripts.js"></script>
 </body>
 </html>
-// test
