@@ -11,8 +11,9 @@ const daftarMakanan1 = [
 ];
 
 let totalPembelian1 = 0;
-daftarMakanan1.forEach(item => {totalPembelian1 += item.price;
-});
+for (let i = 0; i < daftarMakanan1.length; i++) {
+    totalPembelian1 += daftarMakanan1[i].price;
+}
 
 const diskon1 = totalPembelian1 * 0.1;
 const totalDiskon1 = totalPembelian1 - diskon1;
