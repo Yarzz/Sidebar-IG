@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Sidebar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Instagram</h1>
+        <ul>
+            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="#"><i class="fas fa-search"></i>Search</a></li>
+            <li><a href="#"><i class="fas fa-compass"></i>Explore</a></li>
+            <li><a href="#"><i class="fas fa-video"></i>Reels</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i>Message</a></li>
+            <li><a href="#"><i class="fas fa-bell"></i>Notification</a></li>
+            <li><a href="#"><i class="fas fa-user-plus"></i>Create</a></li>
+            <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
+            <li class="more-btn" onclick="toggleMore()"><i class="fas fa-bars"></i>More<i class="fas fa-caret-down"></i></li>
+            <div class="more-items" id="moreMenu">
+                <ul>
+                    <li><a href="#"><i class="fas fa-cog"></i>Settings</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i>Your Activity</a></li>
+                    <li><a href="#"><i class="fas fa-bookmark"></i>Saved</a></li>
+                    <li><a href="#"><i class="fas fa-paint-brush"></i>Switch Appearance</a></li>
+                    <li><a href="#"><i class="fas fa-exclamation-circle"></i>Report a Problem</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i>Trends</a></li>
+                    <li><a href="#"><i class="fas fa-exchange-alt"></i>Switch Account</a></li>
+                    <li><a href="#"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
+                </ul>
+            </div>
+        </ul>
+    </div>
+    <div class="content-container">
+        <div class="content">
+        <div class="story-container">
+            <button class="nav-btn left">&lt;</button>
+            <div class="story">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.DzTt96cD6UnXbg-7DRKJQwHaF4&pid=Api&P=0&h=180" alt="Story 1">
+            </div>
+            <div class="story">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.8PR_TZiIPzpzJAcFdTJQ1gHaD4&pid=Api&P=0&h=180" alt="Story 2">
+            </div>
+            <div class="story">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.52DiNebm1MHnycflSwzHhgHaEc&pid=Api&P=0&h=180" alt="Story 2">
+            </div>
+            <div class="story">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.t99_hGdr_jkVW4Hc3t54eQHaEK&pid=Api&P=0&h=180" alt="Story 2">
+            </div>
+            <div class="story">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.aFZkYCRcCQFitZTLSs8b_QHaEK&pid=Api&P=0&h=180" alt="Story 2">
+            </div>
+            <div class="story">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.wjICgyQ_g9ddztnC1xV-OAHaEo&pid=Api&P=0&h=180" alt="Story 2">
+            </div>
+            <button class="nav-btn right">&gt;</button>
+        </div>
+        <!-- pos 4 -->
+        <div class="post">
+            <div class="post-header">
+                <div class="profile-info">
+                    <img src="https://3.bp.blogspot.com/-XiDM_2NbZ-4/WOCtSHEGg3I/AAAAAAAAAjA/BKH5LNoVA6E_zYZSkmKMkYieCt7b765swCLcB/w1200-h630-p-k-no-nu/47-ronin-samurai-warrior-1280x1024.jpg" alt="Takeda Horoshi">
+                    <h3>Takeda Horoshi</h3>
+                </div>
+            </div>
+            <div class="post-content">
+                <ul class="dmn-list4">
+                </ul>
+                <p>Total Pembelian: Rp <span id="totalPemesanan"></span></p>
+                <p>Total Diskon (10%): Rp <span id="totalDiskon"></span></p>
+                <p>Total Pajak (11%): Rp <span id="totalPajak"></span></p>
+                <p>Total Bayar: Rp <span id="totalBayar"></span></p>
+            </div>
+            <div class="post-actions">
+                <button class="like-btn"><i class="fas fa-heart"></i></button>
+                <button class="comment-btn"><i class="fas fa-comment"></i></button>
+                <button class="share-btn"><i class="fas fa-share"></i></button>
+            </div>
+            <div class="post-comments">
+                <div class="comment">
+                    <div class="profile-info">
+                        <img src="https://tse4.mm.bing.net/th?id=OIP.575opLhlpArqZpGsScOdZQHaJf&pid=Api&P=0&h=180" alt="User Image">
+                        <h3>ArrayOfficial_</h3>
+                    </div>
+                    <p>Array adalah struktur data digunakan untuk 
+                        menyimpan kumpulan nilai atau elemen yang disusun secara berurutan dalam satu variabel.
+                    </p>
+                </div>
+                <div class="comment">
+                    <div class="profile-info">
+                        <img src="https://tse4.mm.bing.net/th?id=OIP.TK6SvRt4yuFXR9hXzxsksgHaE6&pid=Api&P=0&h=180" alt="User Image">
+                        <h3>ObjectOfficial_</h3>
+                    </div>
+                    <p>Objek adalah struktur data yang dapat menyimpan 
+                        berbagai jenis nilai dan informasi terkait dalam satu entitas.
+                    </p>
+                </div>
+            </div>
+            <div class="add-comment">
+                <input type="text" placeholder="Add a comment...">
+                <button class="comment-btn"><i class="fas fa-comment"></i></button>
+            </div>
+        </div>
+        <!-- pos 1 -->
+        <div class="post">
+            <div class="post-header">
+                <div class="profile-info">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.uKiis9EcpaVnAomfsOYAKAHaJW&pid=Api&P=0&h=180" alt="Knights Templar">
+                    <h3>Knights Templar</h3>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>Daftar Pembelian:</p>
+                <ul class="dmn-list1">
+                </ul>
+                <p>Total Pembelian: Rp <span id="totalPembelian1"></span></p>
+                <p>Total Setelah Diskon: Rp <span id="totalDiskon1"></span></p>
+            </div>
+            <div class="post-actions">
+                <button class="like-btn"><i class="fas fa-heart"></i></button>
+                <button class="comment-btn"><i class="fas fa-comment"></i></button>
+                <button class="share-btn"><i class="fas fa-share"></i></button>
+            </div>
+            <div class="post-comments">
+            </div>
+            <div class="add-comment">
+                <input type="text" placeholder="Add a comment...">
+                <button class="comment-btn"><i class="fas fa-comment"></i></button>
+            </div>
+        </div>
+        <!-- pos 2 -->
+        <div class="post">
+            <div class="post-header">
+                <div class="profile-info">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.PFFPQXrZOTkQJyTsqVu2kgHaEK&pid=Api&P=0&h=180" alt="Ivy">
+                    <h3>Ivy</h3>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>Daftar Pembelian:</p>
+                <ul class="dmn-list2">
+                </ul>
+                <p>Total Pembelian: Rp <span id="totalPembelian2"></span></p>
+                <p>Total Setelah Diskon: Rp <span id="totalDiskon2"></span></p>
+            </div>
+            <div class="post-actions">
+                <button class="like-btn"><i class="fas fa-heart"></i></button>
+                <button class="comment-btn"><i class="fas fa-comment"></i></button>
+                <button class="share-btn"><i class="fas fa-share"></i></button>
+            </div>
+            <div class="post-comments">
+            </div>
+            <div class="add-comment">
+                <input type="text" placeholder="Add a comment...">
+                <button class="comment-btn"><i class="fas fa-comment"></i></button>
+            </div>
+        </div>
+        <!-- pos 3 -->
+        <div class="post">
+            <div class="post-header">
+                <div class="profile-info">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.X4A9_NLHi535LM96zw7ECQHaJQ&pid=Api&P=0&h=180" alt="Knights Templar">
+                    <h3>Alfred</h3>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>Daftar Pembelian:</p>
+                <ul class="dmn-list3">
+                </ul>
+                <p>Total Pembelian: Rp <span id="totalPembelian3"></span></p>
+                <p>Total Setelah Diskon: Rp <span id="totalDiskon3"></span></p>
+            </div>
+            <div class="post-actions">
+                <button class="like-btn"><i class="fas fa-heart"></i></button>
+                <button class="comment-btn"><i class="fas fa-comment"></i></button>
+                <button class="share-btn"><i class="fas fa-share"></i></button>
+            </div>
+            <div class="post-comments">
+            </div>
+            <div class="add-comment">
+                <input type="text" placeholder="Add a comment...">
+                <button class="comment-btn"><i class="fas fa-comment"></i></button>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-header">
+                <div class="profile-info">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.T1zA4-LUe8wnhMAmXgpsSgAAAA&pid=Api&P=0&h=180" alt="User Image">
+                    <h3>Ainzz</h3>
+                </div>
+            </div>
+            <div class="post-image">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.f2-v86fTOFnC54ZxgT_ZugHaEK&pid=Api&P=0&h=180" alt="Post Image">
+            </div>
+            <div class="post-actions">
+                <button class="like-btn"><i class="fas fa-heart"></i></button>
+                <button class="comment-btn"><i class="fas fa-comment"></i></button>
+                <button class="share-btn"><i class="fas fa-share"></i></button>
+            </div>
+            <div class="post-comments">
+                <div class="comment">
+                    <div class="profile-info">
+                        <img src="https://tse4.mm.bing.net/th?id=OIP.575opLhlpArqZpGsScOdZQHaJf&pid=Api&P=0&h=180" alt="User Image">
+                        <h3>Commenter</h3>
+                    </div>
+                    <p>Comment text goes here...</p>
+                </div>
+                <div class="comment">
+                    <div class="profile-info">
+                        <img src="https://tse4.mm.bing.net/th?id=OIP.TK6SvRt4yuFXR9hXzxsksgHaE6&pid=Api&P=0&h=180" alt="User Image">
+                        <h3>Another Commenter</h3>
+                    </div>
+                    <p>Another comment text...</p>
+                </div>
+            </div>
+            <div class="add-comment">
+                <input type="text" placeholder="Add a comment...">
+                <button class="comment-btn"><i class="fas fa-comment"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="right-sidebar">
+        <div class="switch-account">
+            <div class="account-list">
+                <div class="account">
+                    <div class="profile-info">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.BOiDADaHdm97UydxesRWrAHaE6&pid=Api&P=0&h=180" alt="Yarzz">
+                        <h3>Yarzz</h3>
+                        <button class="switch-btn">Switch</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="suggested-for-you">
+            <div class="suggested-header">
+                <h2>Suggested for You</h2>
+                <button class="see-all-btn">See All</button>
+            </div>
+            <div class="user-list">
+                <div class="user">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.3t1qul4u9YnRd0CC_ZpE3QAAAA&pid=Api&P=0&h=180" alt="Ashikaga Yoshihide">
+                    <span>Ashikaga Yoshihide</span>
+                    <button class="follow-btn">Follow</button>
+                </div>
+                <div class="user">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.7qmu54x8-M3mo3CSjYZlYgHaEK&pid=Api&P=0&h=180" alt="Daimyo Takeda Shingen">
+                    <span>Daimyo Takeda Shingen</span>
+                    <button class="follow-btn">Follow</button>
+                </div>
+                <div class="user">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.EG8ri77rJF-k2Nm1XO3CtgAAAA&pid=Api&P=0&h=180" alt="Hashiba Hideyoshi">
+                    <span>Hashiba Hideyoshi</span>
+                    <button class="follow-btn">Follow</button>
+                </div>
+                <div class="user">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.WCWmdc_L8b79pDDJd6miogHaGL&pid=Api&P=0&h=180" alt="Oda Nobunaga">
+                    <span>Oda Nobunaga</span>
+                    <button class="follow-btn">Follow</button>
+                </div>
+                <div class="user">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.oo98R6VGCeSXj1esxWYWagAAAA&pid=Api&P=0&h=180" alt="Saitō Tatsuoki">
+                    <span>Saitō Tatsuoki</span>
+                    <button class="follow-btn">Follow</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
